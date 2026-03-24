@@ -2,8 +2,10 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
-
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 const images = [
     "/gallery/1.jpg",
     "/gallery/2.jpg",
@@ -31,11 +33,22 @@ export default function Gallery() {
 
             {/* Mobile swipe carousel */}
             <div className="md:hidden">
-                <Swiper spaceBetween={10} slidesPerView={1}>
+                <Swiper
+                    modules={[Autoplay, Pagination]}
+                    autoplay={{ delay: 4000, disableOnInteraction: false }}
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    loop={true}
+                    pagination={{ type: "progressbar" }}
+                    className="rounded-xl overflow-hidden shadow-lg"
+
+                    navigation
+
+                >
                     {images.map((src, idx) => (
                         <SwiperSlide key={idx}>
                             <div className="overflow-hidden rounded-lg">
-                                <img src={src} alt={`Ruha ${idx + 1}`} className="w-full h-64 object-cover" />
+                                <img src={src} alt={`Ruha ${idx + 1}`} className="w-full h-140 object-cover" />
                             </div>
                         </SwiperSlide>
                     ))}
