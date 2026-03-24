@@ -9,12 +9,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const images = [
-    "/gallery/1.jpg",
-    "/gallery/2.jpg",
-    "/gallery/3.jpg",
-    "/gallery/4.jpg",
-    "/gallery/5.jpg",
-    "/gallery/6.jpg",
+    "/gallery/1.webp",
+    "/gallery/2.webp",
+    "/gallery/3.webp",
+    "/gallery/4.webp",
+    "/gallery/5.webp",
+    "/gallery/6.webp",
 ];
 
 const container: Variants = {
