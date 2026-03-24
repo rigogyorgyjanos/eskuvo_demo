@@ -21,7 +21,7 @@ const container: Variants = {
     hidden: {},
     show: {
         transition: {
-            staggerChildren: 0.2, // képek egymás után animálódnak
+            staggerChildren: 0.15, // képek egymás után animálódnak
         },
     },
 };
@@ -45,9 +45,14 @@ export default function Gallery() {
     const openModal = (index: number) => {
         setCurrentIndex(index);
         setIsOpen(true);
+        document.body.style.overflow = "hidden"
     };
 
-    const closeModal = () => setIsOpen(false);
+    const closeModal = () => {
+        setIsOpen(false);
+        document.body.style.overflow = "auto"
+
+    }
 
     const prevImage = () =>
         setCurrentIndex((currentIndex + images.length - 1) % images.length);
@@ -76,9 +81,10 @@ export default function Gallery() {
                         variants={item}
                     >
                         <img
+                            loading="lazy"
                             src={src}
                             alt={`Ruha ${idx + 1}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 will-change-transform"
                         />
                     </motion.div>
                 ))}
