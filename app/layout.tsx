@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mirandella Esküvői Ruhaszalon",
-  description: "Prémium menyasszonyi ruhák Budapesten – időpontfoglalás",
+  title: "DEMO Esküvői Ruhaszalon",
+  description: "Prémium menyasszonyi ruhák Budapesten",
 };
 
 export default function RootLayout({
