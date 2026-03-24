@@ -2,7 +2,7 @@
 
 export default function Hero({ scrollToId }: { scrollToId?: string }) {
     return (
-        <section className="relative h-screen w-full bg-cover bg-center border-b-2 border-b-gray-300" style={{ backgroundImage: "url('/hero.jpg')" }}>
+        <section className="relative h-[80vh] w-full bg-cover bg-center border-b-2 border-b-gray-300" style={{ backgroundImage: "url('/hero.jpg')" }}>
             <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4">
                 <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight text-white mb-4">
                     Találd meg azt a ruhát, amiben önmagad vagy
